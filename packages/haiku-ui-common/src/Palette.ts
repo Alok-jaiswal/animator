@@ -1,0 +1,41 @@
+export default {
+  DARK_BLUE: '#0098AA',
+  DARK_ROCK_MUTED2: '(160, 181, 188, .1)',
+  DARK_ROCK_MUTED: 'rgba(160, 181, 188, .5)',
+  DARKER_ROCK2: '#A0B5BC',
+  DARKER_ROCK: '#D9E7EC',
+  GREEN: '#A3CE32',
+  LIGHT_BLUE: '#04B6CB',
+  LIGHT_PINK: '#E934F2',
+  LIGHTEST_PINK: '#E934F2',
+  MEDIUM_COAL: '#151C1F',
+  MEDIUM_PINK: '#E934F2',
+  ORANGE: '#F15D4A',
+  ORANGE_SUBDUED: '#F15D4A',
+  PINK: '#E934F2',
+  PURPLE: '#8934FF',
+  RED: 'rgb(242, 29, 29)',
+  RED_DARKER: 'rgb(182, 29, 29)',
+  SHADY: 'rgba(21, 32, 34, .3)',
+
+  BLACK: '#0C0C0C',
+  BLUE: '#04B6CB',
+  DARK_PINK: '#E934F2', // used in the tour (buttons and UI)
+  DARK_ROCK: '#5A727A',
+  PALE_GRAY: '#d1d1d1',
+  ROCK: '#C0CCCD', // Making ROCK a bit colder
+  ROCK_MUTED: '#C0CCCD',
+  SPECIAL_COAL: '#151C1F',
+  STAGE_GRAY: '#ebebeb',
+  SUNSTONE: 'rgb(254,254,254)', // This is our "white", use sparingly
+
+  LIGHTEST_GRAY: '#475154',
+  LIGHTER_GRAY: '#3E484B',
+  LIGHT_GRAY: '#353F42',
+  GRAY: '#2D373A',
+  DARK_GRAY: '#222B2E',
+  DARKER_GRAY: '#1B2427',
+  COAL: '#1A2225',
+  FATHER_COAL: '#090D0E',
+  DARKEST_COAL: '#090D0E',
+};

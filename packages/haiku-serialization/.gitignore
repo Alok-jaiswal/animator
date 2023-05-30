@@ -1,0 +1,6 @@
+.DS_Store
+node_modules
+*.log
+checkstyle-result.xml
+test-result.tap
+test/fixtures/projects

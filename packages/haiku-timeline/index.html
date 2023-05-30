@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Haiku Timeline</title>
+    <link rel="stylesheet" href="./public/styles/codemirror.css">
+    <link rel="stylesheet" href="./public/styles/codemirror-haiku.css">
+    <link rel="stylesheet" href="./public/styles/Icons.css">
+    <link rel="stylesheet" href="./public/styles/Layout.css">
+    <link rel="stylesheet" href="./public/styles/Timeline.css">
+    <link rel="stylesheet" href="../../node_modules/haiku-ui-common/css/tooltips.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.eval = global.eval = function () {
+        // noop: eval is forbidden
+      }
+    </script>
+    <script src="../../node_modules/raven-js/dist/raven.js"></script>
+    <script>
+      require('../../node_modules/haiku-serialization/src/utils/LoggerInstance').view = 'timeline';
+      require('./lib/index')
+    </script>
+  </body>
+</html>

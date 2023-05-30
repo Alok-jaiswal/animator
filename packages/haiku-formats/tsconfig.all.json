@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noImplicitAny": false,
+    "baseUrl": ".",
+    "paths": {
+      "@formats/*": ["src/*"],
+      "@core/*": ["../@haiku/core/src/*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "scripts/*.ts"
+  ]
+}

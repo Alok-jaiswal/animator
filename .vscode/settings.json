@@ -1,0 +1,17 @@
+{
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "search.exclude": {
+        "**/coverage/**": true,
+        "packages/**/lib/**/*": true,
+        "packages/haiku-formats/test/goldens/**": true
+    },
+    "typescript.format.enable": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "tslint.jsEnable": true,
+    "tslint.alwaysShowRuleFailuresAsWarnings": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.tslint": true
+    }
+}

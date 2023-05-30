@@ -1,0 +1,148 @@
+{
+  "version": "3.5.1",
+  "compounds": [
+    {
+      "name": "core-demo",
+      "configurations": [
+        "core-demo-server",
+        "core-demo-client"
+      ]
+    },
+    {
+        "name": "attach-haiku",
+        "configurations": [
+          "attach-main",
+          "attach-master",
+          "attach-creator",
+          "attach-glass",
+          "attach-timeline"
+        ]
+    }
+  ],
+  "configurations": [
+    {
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000/demos/butterblast/debug",
+      "webRoot": "${workspaceFolder}/packages/@haiku/core/demo",
+      "sourceMaps": true,
+      "name": "core-demo-client",
+      "sourceMapPathOverrides": {
+        "webpack://HaikuDOMAdapter/./src/*": "${workspaceFolder}/packages/@haiku/core/src/*"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/@haiku/core",
+      "env": {
+        "WAIT_FOR_DEBUGGER": "1"
+      },
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "./scripts/demos.ts"
+      ],
+      "name": "core-demo-server"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "name": "attach-glass",
+      "targetTypes": null,
+      "urlFilter": "*haiku-glass/index.html*"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "name": "attach-creator",
+      "urlFilter": "*haiku-creator/index.html*"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "name": "attach-oven",
+      "urlFilter": "*haiku-creator/oven.html*"
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "sourceMaps": true,
+      "webRoot": "${workspaceFolder}",
+      "name": "attach-timeline",
+      "targetTypes": null,
+      "urlFilter": "*haiku-timeline/index.html*"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "sourceMaps": true,
+      "port": 9221,
+      "outFiles": [
+        "${workspaceFolder}/packages/**/lib/**/*.js",
+        "${workspaceFolder}/packages/**/lib/*.js"
+      ],
+      "name": "attach-master"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "sourceMaps": true,
+      "port": 9220,
+      "outFiles": [
+        "${workspaceFolder}/packages/**/lib/**/*.js",
+        "${workspaceFolder}/packages/**/lib/*.js"
+      ],
+      "name": "attach-main"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/haiku-formats",
+      "env": {
+        "TS_NODE_PROJECT": "./tsconfig.all.json"
+      },
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+        "-r",
+        "tsconfig-paths/register"
+      ],
+      "args": [
+        "./scripts/regenerate-goldens.ts"
+      ],
+      "name": "debug-regenerate-goldens"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/packages/haiku-formats",
+      "env": {
+        "TS_NODE_PROJECT": "./tsconfig.all.json"
+      },
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register",
+        "-r",
+        "tsconfig-paths/register"
+      ],
+      "args": [
+        "./node_modules/.bin/tape",
+        "test/**/*.test.ts"
+      ],
+      "name": "debug-haiku-formats-tests"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "ShowSubElementsInJitMenu": true,
+  "AdvancedMultiTransform": true,
+  "DirectSelectionOfPrimitives": true,
+  "IpcIntegrityCheck": true,
+  "CrashOnIpcIntegrityCheckFailure": true,
+  "OrderedActionStack": true,
+  "CodeEditor": true,
+  "WarnOnUndefinedStateVariables": true,
+  "TimelineMarqueeSelection": true,
+  "LocalAssetExport": true,
+  "AllowBitmapImages": false,
+  "SizeInsteadOfScaleWhenPossible": true,
+  "Snapping": true,
+  "PinchToZoomInGlass": true,
+  "PreserveFrontMatterInCode": true,
+  "OutliningElementsOnStageFromStage": false,
+  "ExpandTimelinePropertiesFromStageChanges": true,
+  "DumpBase64Images": true,
+  "WindowMenu": false,
+  "AutoTweenNewKeyframes": true
+}
